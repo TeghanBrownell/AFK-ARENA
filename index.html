@@ -10,12 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Permanent+Marker&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   /* ============================================
-     CONFIG — Lemon Squeezy checkout overlay.
-     Buy buttons use class="lemonsqueezy-button" + the
-     product checkout URL. The lemon.js script at the
-     bottom of <body> intercepts clicks and opens the
-     overlay automatically. Update prices in the
-     pricing cards below to match your LS products.
+     CONFIG — Komerza checkout overlay.
+     Buy buttons carry data-kmrza-product-id and
+     data-kmrza-variant-id. The Komerza embed script at
+     the bottom of <body> binds them on Komerza.init()
+     and opens the checkout overlay. The IDs come from
+     the Komerza dashboard (product "afk bot", variants
+     Starter/Pro/Lifetime); keep the prices below in
+     sync with the variant prices there.
      ============================================ */
   :root {
     --yellow: #FFE500;
@@ -485,7 +487,7 @@
 <section id="pricing">
   <div class="container">
     <h2 class="section-title">GET A KEY</h2>
-    <p class="section-sub">Pick your tier. Secure checkout via Lemon Squeezy.</p>
+    <p class="section-sub">Pick your tier. Secure checkout - card, PayPal or crypto.</p>
     <div class="pricing-grid">
       <!-- 7 DAY -->
       <div class="tier">
@@ -499,7 +501,7 @@
           <li>Instant key delivery</li>
           <li>Direct support</li>
         </ul>
-        <a href="https://afk-bot.lemonsqueezy.com/checkout/buy/0af366d6-3797-419f-b977-3fad9cd6eea5?embed=1" class="buy-btn lemonsqueezy-button" data-tier="7-day">BUY $10</a>
+        <a href="#" class="buy-btn" data-tier="7-day" data-kmrza-product-id="ff44e9c4-5047-4175-a0ae-22f482cab789" data-kmrza-variant-id="09980c7f-fada-492e-8fc8-6f499513a420" data-kmrza-theme="dark">BUY $10</a>
       </div>
       <!-- 3 WEEK (featured) -->
       <div class="tier featured">
@@ -514,7 +516,7 @@
           <li>Instant key delivery</li>
           <li>Priority support</li>
         </ul>
-        <a href="https://afk-bot.lemonsqueezy.com/checkout/buy/04341e5e-829e-4e2d-a85b-535d9792b1ae?embed=1" class="buy-btn lemonsqueezy-button" data-tier="3-week">BUY $20</a>
+        <a href="#" class="buy-btn" data-tier="3-week" data-kmrza-product-id="ff44e9c4-5047-4175-a0ae-22f482cab789" data-kmrza-variant-id="e63d398c-a1e2-48a9-984c-7ed325dc367b" data-kmrza-theme="dark">BUY $20</a>
       </div>
       <!-- LIFETIME -->
       <div class="tier">
@@ -528,7 +530,7 @@
           <li>All future updates included</li>
           <li>VIP support</li>
         </ul>
-        <a href="https://afk-bot.lemonsqueezy.com/checkout/buy/efc1def0-eaa5-4464-8532-f774471a656c?embed=1" class="buy-btn lemonsqueezy-button" data-tier="lifetime">BUY $100</a>
+        <a href="#" class="buy-btn" data-tier="lifetime" data-kmrza-product-id="ff44e9c4-5047-4175-a0ae-22f482cab789" data-kmrza-variant-id="e7a607f8-68b5-43a2-8679-a6cfb0946200" data-kmrza-theme="dark">BUY $100</a>
       </div>
     </div>
   </div>
@@ -541,7 +543,12 @@
     AFK-BOT is an independent third-party tool and is not affiliated with, endorsed by, or sponsored by any game publisher. Use at your own risk; automation may violate a game's Terms of Service.
   </div>
 </footer>
-<!-- Lemon Squeezy checkout overlay -->
-<script async defer src="https://assets.lemonsqueezy.com/lemon.js"></script>
+<!-- Komerza checkout overlay -->
+<script src="https://checkout.komerza.com/embed/embed.iife.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.Komerza) Komerza.init();
+  });
+</script>
 </body>
 </html>
