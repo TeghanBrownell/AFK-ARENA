@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AFK-BOT — Farm Units, Battle-Chips & Gold</title>
-<meta name="description" content="AFK-BOT: the ultimate arena bot. Farm Units, Battle-Chips, and Gold — 24/7, hands-free." />
+<title>AFK-BOT - Automate the Grind</title>
+<meta name="description" content="AFK-BOT: the ultimate arena automation tool. Automate repetitive in-game tasks - 24/7, hands-free." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Permanent+Marker&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -411,6 +411,15 @@
   }
   .buy-btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
   .tier.featured .buy-btn { background: var(--ink); }
+  .platforms {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    margin: -38px auto 46px;
+    max-width: 560px;
+  }
+  .platforms strong { background: var(--yellow); border: 2px solid var(--ink); padding: 1px 7px; white-space: nowrap; }
   /* ============================================
      FOOTER
      ============================================ */
@@ -423,12 +432,28 @@
   }
   footer .logo { font-size: 28px; margin-bottom: 8px; }
   footer .disclaimer {
-    max-width: 600px;
-    margin: 12px auto 0;
+    max-width: 720px;
+    margin: 16px auto 0;
     font-size: 11px;
     color: #888;
     line-height: 1.6;
   }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+    margin: 14px 0 10px;
+  }
+  .footer-links a {
+    color: var(--yellow);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .footer-links a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -451,7 +476,7 @@
   <div class="hero-inner">
     <span class="tag">⚡ THE #1 ARENA BOT</span>
     <h1>AFK-BOT</h1>
-    <p class="sub">Farm Units, Battle-Chips, and Gold — 24/7, hands-free. Wake up rich. Log in stacked. Dominate the arena.</p>
+    <p class="sub">Automate the grind - 24/7, hands-free. Wake up ahead. Log in stacked. Skip the boring parts.</p>
     <a href="#pricing" class="btn-big">GET A KEY →</a>
   </div>
   <div class="scroll-hint">▼ SCROLL ▼</div>
@@ -464,21 +489,21 @@
     <div class="panels">
       <div class="panel">
         <span class="sfx">POW!</span>
-        <div class="panel-icon"><img src="assets/units.png" alt="Units" /></div>
-        <h3>Farm Units</h3>
-        <p>The bot grinds unit drops on loop. Build up your stash for the next deal.</p>
+        <div class="panel-icon"><img src="assets/resources.png" alt="Automated resource grinding" /></div>
+        <h3>Automate Resource Grinding</h3>
+        <p>Loops the boring drops on autopilot. Wake up to a fuller stash.</p>
       </div>
       <div class="panel">
         <span class="sfx">ZAP!</span>
-        <div class="panel-icon"><img src="assets/battlechips.png" alt="Battle-Chips" /></div>
-        <h3>Farm Battle-Chips</h3>
-        <p>Stockpile Battle-Chips 24/7. Never run short on currency to better your roster.</p>
+        <div class="panel-icon"><img src="assets/currency.png" alt="Automated currency farming" /></div>
+        <h3>Automate Currency Farming</h3>
+        <p>Builds up in-game currency overnight. Never run short again.</p>
       </div>
       <div class="panel">
         <span class="sfx">KA-CHING!</span>
-        <div class="panel-icon"><img src="assets/gold.png" alt="Gold" /></div>
-        <h3>Farm Gold</h3>
-        <p>Passive gold generation never run out again while upgrading a champ.</p>
+        <div class="panel-icon"><img src="assets/items.png" alt="Automated item collection" /></div>
+        <h3>Automate Item Collection</h3>
+        <p>Passive collection while you do other things. No more babysitting the screen.</p>
       </div>
     </div>
   </div>
@@ -488,6 +513,7 @@
   <div class="container">
     <h2 class="section-title">GET A KEY</h2>
     <p class="section-sub">Pick your tier. Secure checkout - card, PayPal or crypto.</p>
+    <p class="platforms">Runs on <strong>Windows 10/11</strong> and <strong>macOS (Apple Silicon)</strong>. Download link is emailed with your key.</p>
     <div class="pricing-grid">
       <!-- 7 DAY -->
       <div class="tier">
@@ -496,7 +522,7 @@
         <div class="price"><span class="dollar">$</span>10</div>
         <div class="price-note">One-Time Payment</div>
         <ul>
-          <li>Farm Units, Chips & Gold</li>
+          <li>Automates the full grind loop</li>
           <li>7 days full access</li>
           <li>Instant key delivery</li>
           <li>Direct support</li>
@@ -511,7 +537,7 @@
         <div class="price"><span class="dollar">$</span>20</div>
         <div class="price-note">One-Time Payment</div>
         <ul>
-          <li>Farm Units, Chips & Gold</li>
+          <li>Automates the full grind loop</li>
           <li>21 days full access</li>
           <li>Instant key delivery</li>
           <li>Priority support</li>
@@ -523,9 +549,9 @@
         <h3>Lifetime</h3>
         <div class="duration">LIFETIME KEY</div>
         <div class="price"><span class="dollar">$</span>100</div>
-        <div class="price-note">One & Done — Forever</div>
+        <div class="price-note">One & Done - Forever</div>
         <ul>
-          <li>Farm Units, Chips & Gold</li>
+          <li>Automates the full grind loop</li>
           <li>Permanent access, no renewals</li>
           <li>All future updates included</li>
           <li>VIP support</li>
@@ -538,9 +564,14 @@
 </main>
 <footer>
   <div class="logo">AFK-BOT</div>
+  <div class="footer-links">
+    <a href="terms.html">Terms of Service</a>
+    <a href="refund-policy.html">Refund Policy</a>
+    <a href="mailto:support@afk-bot.com">support@afk-bot.com</a>
+  </div>
   <div>© 2026 AFK-BOT. All rights reserved.</div>
   <div class="disclaimer">
-    AFK-BOT is an independent third-party tool and is not affiliated with, endorsed by, or sponsored by any game publisher. Use at your own risk; automation may violate a game's Terms of Service.
+    AFK-BOT is an independent third-party automation tool. It is not affiliated with, endorsed by, sponsored by, or otherwise connected to any game developer, publisher, or rights holder. AFK-BOT does not modify game files, read game memory, alter game code, or interact with game servers. It operates externally by reading the user's own screen and simulating user input. Use of automation tools may violate the End User License Agreement (EULA) or Terms of Service of any specific game, and may result in account suspension, termination, or loss of in-game purchases. You are solely responsible for ensuring your use of this tool complies with all applicable EULAs, Terms of Service, and laws in your jurisdiction. AFK-BOT and its operators assume no liability for any account actions taken by any third party against the user.
   </div>
 </footer>
 <!-- Komerza checkout overlay -->
